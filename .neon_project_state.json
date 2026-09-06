@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "goal": "Build an AI animation agent platform (oiioii-style) with full engineering surface: auth, projects, creative workflow orchestration (script -> character -> scene -> storyboard -> render -> sound), job system, asset store, MediaGenerationService using API keys from env, workflow/jobs/assets APIs, and a polished workspace UI with agent timeline and asset gallery. Handle media failures as structured job failures.\nAcceptance criteria (must eventually all pass):\n- [scaffold] Project scaffold exists\n- [architecture] ARCHITECTURE.md exists\n- [tests] Test suite exists\nCURRENT HARD FAILURES -- prioritize fixing these:\n- [tests] missing path: tests\nWork in the project directory. Prefer editing existing code over rewriting everything. Use tools. Run tests. Do not claim completion until criteria are actually satisfied.",
+  "phase": "design",
+  "completed_phases": [
+    "architecture",
+    "planning"
+  ],
+  "autopilot_active": true,
+  "autopilot_resume": true,
+  "sdlc_phase_idx": 2,
+  "stack": [],
+  "entrypoints": [],
+  "test_command": null,
+  "key_modules": [],
+  "last_failures": [],
+  "open_todos": [
+    {
+      "id": "T001",
+      "content": "Research oiioii.ai feature list and API patterns for AI animation platform",
+      "status": "pending"
+    },
+    {
+      "id": "T002",
+      "content": "Scaffold backend (FastAPI) with auth, projects, workflow, jobs, assets, MediaGenerationService",
+      "status": "pending"
+    },
+    {
+      "id": "T003",
+      "content": "Build frontend workspace UI with agent timeline and asset gallery",
+      "status": "pending"
+    },
+    {
+      "id": "T004",
+      "content": "Author ARCHITECTURE.md with components, data flow, and API surface",
+      "status": "pending"
+    },
+    {
+      "id": "T005",
+      "content": "Write pytest suite covering auth, projects, workflow, jobs, and media service",
+      "status": "pending"
+    },
+    {
+      "id": "T006",
+      "content": "Run validate_project and fix any failures before claiming phase done",
+      "status": "pending"
+    }
+  ],
+  "decisions": [
+    "captured 10 acceptance criteria from PLAN.md"
+  ],
+  "blockers": [
+    "production validation blocked: backend/__init__.py: empty source file; backend/routers/__init__.py: empty source file; backend/services/__init__.py: empty source file"
+  ],
+  "next_action": "todo: Run validate_project and fix any failures before claiming phase done",
+  "research_notes": [
+    "search:oiioii AI animation agent platform",
+    "search:AI animation workflow agent script character scene storyboard render",
+    "browse:https://www.oiioii.ai/home",
+    "browse:https://www.oiioii.ai/blog/what-is-oiioii-ai"
+  ],
+  "src_write_paths": [],
+  "acceptance_criteria": [
+    "Project scaffold (backend/, frontend/, tests/, ARCHITECTURE.md, PLAN.md) exists and is reproducible",
+    "Authentication endpoints (register, login, logout, me) return JWT and validate on protected routes",
+    "Projects CRUD endpoints enforce ownership and persist to the database",
+    "Workflow orchestration exposes script -> character -> scene -> storyboard -> render -> sound stages with explicit transitions and persisted state",
+    "Job system accepts submissions, tracks status (queued/running/succeeded/failed), retries on transient failure, and surfaces structured errors",
+    "MediaGenerationService reads API keys only from environment variables and integrates image, video, and audio providers",
+    "Asset store endpoints list, retrieve, and serve generated media with content addressing",
+    "Workspace UI renders agent timeline, current stage, and asset gallery with real status from the backend",
+    "Test suite (pytest) covers auth, projects, workflow, jobs, and media service paths and passes",
+    "ARCHITECTURE.md documents components, data flow, and API surface"
+  ],
+  "updated_at": "2026-08-05T11:10:41",
+  "validation": {
+    "version": 1,
+    "ready": false,
+    "manifests": [],
+    "source_files": 22,
+    "test_files": 0,
+    "blockers": [
+      "backend/__init__.py: empty source file",
+      "backend/routers/__init__.py: empty source file",
+      "backend/services/__init__.py: empty source file",
+      "frontend/src/generated.tsx: unresolved placeholder language",
+      "no supported project manifest found (package.json, pyproject.toml, requirements.txt, setup.py, go.mod, Cargo.toml, or pubspec.yaml)"
+    ],
+    "warnings": [
+      "frontend/src/generated.tsx:151: storing 'token' via AsyncStorage/localStorage — this is unencrypted, app-sandbox-only storage; use Keychain (iOS) / Keystore-backed EncryptedSharedPreferences (Android) / expo-secure-store for anything sensitive"
+    ],
+    "checks": [],
+    "test_digest": ""
+  }
+}
